@@ -35,9 +35,9 @@ from django.http import JsonResponse
 def json_test(request):
     data = {'name': 'alex', 'pwd': 'alexdsb'}
 
-    ret = HttpResponse(json.dumps(data))
-    ret['Content-Type'] = 'application/json'
-    ret['xxx'] = 'axxx'
-    return ret
+    # ret = HttpResponse(json.dumps(data))
+    # ret['Content-Type'] = 'application/json'
+    # ret['xxx'] = 'axxx'
+    # return ret
     # return HttpResponse(json.dumps(data), content_type='application/json')  # Content-Type: text/html; charset=utf-8
-    # return JsonResponse(data)  # Content-Type: application/json
+    return JsonResponse(data)  # Content-Type: application/json
